@@ -136,6 +136,7 @@ a {
   margin-left: auto;
   margin-right: auto;
   max-width: 1440px;
+  background-repeat: no-repeat;
 }
 .principles-list {
   background-color: #ffffff;
@@ -176,6 +177,7 @@ a {
 .btn:hover,
 .btn:focus {
   background-color: #404bbf;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .visually-hidden {
   position: absolute;
@@ -241,6 +243,8 @@ a {
 .team-info {
   padding-top: 32px;
   padding-bottom: 32px;
+}
+.team-item .team-info {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
@@ -280,13 +284,14 @@ a {
   height: 40px;
   border-radius: 50%;
   background-color: #4d5ae5;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-icon {
   fill: #f4f4fd;
 }
-.social-link:hover {
-  background-color: #31d0aa;
+.social-link:hover,
+.social-link:focus {
+  background-color: #404bbf;
 }
 
 .portfolio {
@@ -317,20 +322,20 @@ a {
 }
 .overlay p {
   position: absolute;
-  bottom: -100%;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 32px;
+  padding: 40px 32px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
   background-color: #4d5ae5;
-  transition: bottom 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-item:hover,
 .portfolio-item:focus {
@@ -339,7 +344,7 @@ a {
 }
 .portfolio-item:hover .overlay p,
 .portfolio-item:focus .overlay p {
-  bottom: 0;
+  transform: translateY(0);
 }
 .portfolio-card {
   padding: 32px 16px;
@@ -360,6 +365,7 @@ a {
 .page-footer .container {
   display: flex;
   gap: 120px;
+  align-items: baseline;
 }
 .text-footer {
   align-items: center;
@@ -373,4 +379,7 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 208px;
+}
+.page-footer .block-text {
+  margin-bottom: 16px;
 }
