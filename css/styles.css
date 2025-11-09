@@ -369,12 +369,12 @@ a {
   align-items: baseline;
 }
 .text-footer {
-  align-items: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #fff;
+  margin-bottom: 16px;
 }
 .footer-social {
   display: flex;
@@ -387,6 +387,18 @@ a {
 .page-footer .social-list {
   display: flex;
   gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+.page-footer .social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .page-footer .social-link:hover,
 .page-footer .social-link:focus {
