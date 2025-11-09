@@ -365,8 +365,10 @@ a {
 }
 .page-footer .container {
   display: flex;
-  gap: 120px;
   align-items: baseline;
+}
+.footer-info {
+  margin-right: 120px;
 }
 .text-footer {
   font-weight: 500;
