@@ -254,6 +254,7 @@ a {
 }
 .team-item p {
   text-align: center;
+  margin-bottom: 8px;
 }
 .section-title {
   font-weight: 700;
@@ -273,7 +274,6 @@ a {
   justify-content: center;
   gap: 24px;
   list-style: none;
-  margin-top: 16px;
   padding: 0;
 }
 .social-link {
